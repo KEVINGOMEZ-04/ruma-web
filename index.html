@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FCFAFF" />
   <title>ruma — Tus personas, tus recuerdos, tu refugio privado</title>
-  <meta name="description" content="ruma es el espacio digital privado para grupos de amigos, parejas y familias: recuerdos en Google Drive, actividades y responsabilidades, club de cine, series, música, libros y chat contextual." />
+  <meta name="description" content="ruma es el espacio digital privado para grupos de amigos, parejas y familias: recuerdos en Google Drive, actividades con responsabilidades, club de cine, series, música, libros y chat contextual." />
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
@@ -33,8 +33,9 @@
       </a>
 
       <nav class="nav-links" aria-label="Secciones principales">
-        <a href="#funciones">Funciones</a>
-        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#recorrido">Cómo funciona</a>
+        <a href="#pantallazos">Pantallas</a>
+        <a href="#casos-de-uso">Para grupos</a>
         <a href="#planes">Planes</a>
         <a href="#faq">Preguntas</a>
         <a href="privacidad.html">Privacidad</a>
@@ -54,8 +55,10 @@
 
     <div class="mobile-drawer" id="mobile-drawer">
       <nav class="mobile-drawer-links" aria-label="Menú móvil">
-        <a href="#funciones">Funciones</a>
-        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#recorrido">Cómo funciona</a>
+        <a href="#pantallazos">Pantallas reales</a>
+        <a href="#casos-de-uso">Para quién es ruma</a>
+        <a href="#instalar">Instalar en tu teléfono</a>
         <a href="#planes">Planes</a>
         <a href="#faq">Preguntas frecuentes</a>
         <a href="privacidad.html">Política de privacidad</a>
@@ -67,18 +70,18 @@
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Hero con escenario de pantallas reales -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
           <div class="hero-eyebrow">Tus personas · Tus recuerdos · Tu refugio</div>
           <h1>Un espacio privado para las personas que importan.</h1>
           <p class="hero-lead">
-            <strong>ruma</strong> reúne en un solo lugar lo que tu grupo vive y comparte: recuerdos guardados en Google Drive, actividades con responsabilidades claras, club de cine, series, música, libros y chat contextual. Sin algoritmos, sin ruido y sin anuncios.
+            <strong>ruma</strong> reúne en un solo lugar lo que tu grupo vive y comparte: actividades con responsabilidades claras, recuerdos guardados en Google Drive, club de cine, series, música, libros y chat contextual. Sin algoritmos, sin ruido y sin anuncios.
           </p>
           <div class="hero-cta-row">
             <a href="https://kevingomez-04.github.io/ruma-app/" target="_blank" rel="noopener" class="btn btn-primary">Abrir ruma Beta</a>
-            <a href="#funciones" class="btn btn-secondary">Explorar funciones</a>
+            <a href="#recorrido" class="btn btn-secondary">Ver cómo funciona</a>
           </div>
           <div class="hero-meta">
             <span>
@@ -94,255 +97,408 @@
               Solo por invitación
             </span>
           </div>
+
+          <div class="hero-metrics">
+            <div class="hero-metric">
+              <strong>7 módulos</strong>
+              <span>En un solo espacio privado</span>
+            </div>
+            <div class="hero-metric">
+              <strong>Google Drive</strong>
+              <span>Tus fotos en calidad original</span>
+            </div>
+            <div class="hero-metric">
+              <strong>0 anuncios</strong>
+              <span>Sin algoritmos ni feeds públicos</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Vista previa interactiva de la app -->
-        <div class="showcase-wrap" aria-label="Vista previa interactiva de ruma">
-          <div class="showcase-tabs" role="tablist" aria-label="Módulos de ruma">
-            <button type="button" class="showcase-tab active" data-preview-tab="actividades" role="tab" aria-selected="true">Actividades</button>
-            <button type="button" class="showcase-tab" data-preview-tab="recuerdos" role="tab" aria-selected="false">Recuerdos</button>
-            <button type="button" class="showcase-tab" data-preview-tab="club" role="tab" aria-selected="false">Club Media</button>
-            <button type="button" class="showcase-tab" data-preview-tab="chat" role="tab" aria-selected="false">Chat</button>
+        <!-- Escenario visual con capturas reales de la app -->
+        <div class="hero-stage" aria-label="Pantallazos reales de ruma">
+          <div class="showcase-tabs" role="tablist" aria-label="Cambiar pantalla de vista previa">
+            <button type="button" class="showcase-tab active" data-hero-screen="home" role="tab" aria-selected="true">Inicio</button>
+            <button type="button" class="showcase-tab" data-hero-screen="activities" role="tab" aria-selected="false">Actividades</button>
+            <button type="button" class="showcase-tab" data-hero-screen="memories" role="tab" aria-selected="false">Recuerdos</button>
+            <button type="button" class="showcase-tab" data-hero-screen="chat" role="tab" aria-selected="false">Chat</button>
           </div>
 
-          <div class="phone-frame">
-            <div class="phone-screen">
-              <div class="phone-notch" aria-hidden="true"></div>
-              <div class="phone-topbar">
-                <span class="phone-group-pill">
-                  <img src="assets/ruma_home_axolotl.png" alt="" width="22" height="22" />
-                  Los de Siempre
-                </span>
-                <span>4 miembros</span>
-              </div>
+          <div class="stage-cluster">
+            <div class="stage-glow" aria-hidden="true"></div>
 
-              <!-- Panel 1: Actividades -->
-              <div class="phone-panel active" data-preview-panel="actividades">
-                <div class="p-card">
-                  <div class="p-card-head">
-                    <div>
-                      <div class="p-title">Cine — Avengers: Doomsday</div>
-                      <div class="p-sub">12 dic · Cinemark · 3 integrantes</div>
-                    </div>
-                    <span class="p-status">Confirmada</span>
-                  </div>
-                  <div class="p-progress-row">
-                    <span id="demo-act-progress-label">2/4 responsabilidades</span>
-                    <strong id="demo-act-progress-pct" style="color:#E9D5FF;">50%</strong>
-                  </div>
-                  <div class="p-bar"><i id="demo-act-progress-fill" style="width:50%;"></i></div>
-                </div>
+            <!-- Pantalla lateral izquierda (clic para cambiar) -->
+            <button type="button" class="stage-peek stage-peek-left" data-peek-screen="activity-detail" aria-label="Ver pantalla de responsabilidades">
+              <img src="assets/screens/screen-activity-detail.webp" alt="Vista de responsabilidades en ruma" width="196" height="424" />
+            </button>
 
-                <div class="p-tasks">
-                  <button type="button" class="p-task done" data-demo-task aria-pressed="true">
-                    <span class="p-check">✓</span>
-                    <span class="p-task-text">Comprar las boletas</span>
-                    <span class="p-assignee">Kevin</span>
-                  </button>
-                  <button type="button" class="p-task done" data-demo-task aria-pressed="true">
-                    <span class="p-check">✓</span>
-                    <span class="p-task-text">Confirmar horarios</span>
-                    <span class="p-assignee">Kevin</span>
-                  </button>
-                  <button type="button" class="p-task" data-demo-task aria-pressed="false">
-                    <span class="p-check"></span>
-                    <span class="p-task-text">Gestionar el transporte</span>
-                    <span class="p-assignee">Meli</span>
-                  </button>
-                  <button type="button" class="p-task" data-demo-task aria-pressed="false">
-                    <span class="p-check"></span>
-                    <span class="p-task-text">Coordinar hora de salida</span>
-                    <span class="p-assignee">Meli</span>
-                  </button>
-                </div>
+            <!-- Teléfono principal -->
+            <div class="device-bezel">
+              <div class="device-viewport" id="hero-phone-viewport">
+                <img id="hero-phone-img" src="assets/screens/screen-home.webp" alt="Pantalla principal de un grupo en ruma" width="390" height="844" />
+                <button type="button" class="device-zoom-btn" id="hero-zoom-btn" data-open-lightbox="home" aria-label="Ampliar pantallazo">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg>
+                  Ampliar
+                </button>
               </div>
+            </div>
 
-              <!-- Panel 2: Recuerdos -->
-              <div class="phone-panel" data-preview-panel="recuerdos">
-                <div class="p-card">
-                  <div class="p-memory-hero">
-                    <span>Domingo 15 de noviembre · Mirador</span>
-                    <strong>Tarde de Mirador y Café</strong>
-                  </div>
-                  <div class="p-drive-row">
-                    <span>Sincronizado en Google Drive</span>
-                    <span>14 archivos</span>
-                  </div>
-                </div>
-                <div class="p-card">
-                  <div class="p-title" style="font-size:0.86rem;">Subcarpeta automática</div>
-                  <div class="p-sub" style="font-family:var(--font-mono);font-size:0.7rem;margin-top:0.35rem;color:#C4B5FD;">
-                    Tarde de Mirador y Café - Domingo 15 de noviembre
-                  </div>
-                  <div class="p-sub" style="margin-top:0.55rem;">
-                    Fotos en calidad original, videos y notas de voz guardados directamente en la carpeta de tu grupo.
-                  </div>
-                </div>
-              </div>
+            <!-- Pantalla lateral derecha (clic para cambiar) -->
+            <button type="button" class="stage-peek stage-peek-right" data-peek-screen="movies" aria-label="Ver pantalla de club de películas">
+              <img src="assets/screens/screen-movies.webp" alt="Vista de club de películas en ruma" width="196" height="424" />
+            </button>
 
-              <!-- Panel 3: Club Media -->
-              <div class="phone-panel" data-preview-panel="club">
-                <div class="p-media-list">
-                  <div class="p-media-item">
-                    <div class="p-media-badge">CINE</div>
-                    <div class="p-media-meta">
-                      <strong>Interstellar (2014)</strong>
-                      <span>Vista por 4/4 · 3 reseñas</span>
-                    </div>
-                    <span class="p-score">9.7</span>
-                  </div>
-                  <div class="p-media-item">
-                    <div class="p-media-badge">SERIE</div>
-                    <div class="p-media-meta">
-                      <strong>Arcane · T2 Cap 4</strong>
-                      <span>Progreso individual por episodio</span>
-                    </div>
-                    <span class="p-score">9.6</span>
-                  </div>
-                  <div class="p-media-item">
-                    <div class="p-media-badge">LIBRO</div>
-                    <div class="p-media-meta">
-                      <strong>El Principito</strong>
-                      <span>Leyendo · Club de lectura</span>
-                    </div>
-                    <span class="p-score">9.4</span>
-                  </div>
-                  <div class="p-media-item">
-                    <div class="p-media-badge">MÚSICA</div>
-                    <div class="p-media-meta">
-                      <strong>Sweater Weather</strong>
-                      <span>The Neighbourhood · Avance 30s</span>
-                    </div>
-                    <span class="p-score">5.0</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Panel 4: Chat -->
-              <div class="phone-panel" data-preview-panel="chat">
-                <div class="p-chat-stack">
-                  <div class="p-bubble">
-                    <div class="p-quote">
-                      <b>Recuerdo · Tarde de Mirador</b>
-                      <span>14 fotos guardadas en Drive</span>
-                    </div>
-                    Quedaron increíbles las fotos del atardecer, ya subí los videos.
-                  </div>
-                  <div class="p-bubble mine">
-                    <div class="p-quote">
-                      <b>Actividad · Cine Avengers</b>
-                      <span>2/4 responsabilidades · 50%</span>
-                    </div>
-                    Listo, ya aseguré las boletas de las 7:30 pm.
-                  </div>
-                  <div class="p-bubble">
-                    Perfecto, yo coordino la salida a las 6:40 pm.
-                  </div>
-                </div>
-              </div>
+            <!-- Etiquetas contextuales sutiles -->
+            <div class="stage-chip stage-chip-top" aria-hidden="true">
+              <span class="stage-chip-dot"></span>
+              Sincronizado en tiempo real
+            </div>
+            <div class="stage-chip stage-chip-bottom" aria-hidden="true">
+              Código privado · 6 caracteres
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Funciones principales -->
-    <section class="section" id="funciones">
+    <!-- Recorrido Visual Interactivo: Cómo funciona paso a paso -->
+    <section class="section" id="recorrido">
       <div class="container">
-        <div class="section-head">
-          <div class="section-label">Diseñado para grupos reales</div>
-          <h2>Todo lo que comparten, organizado sin esfuerzo.</h2>
-          <p>Cada módulo de ruma resuelve algo cotidiano entre amigos, parejas o familias, manteniendo todo ordenado dentro de espacios privados.</p>
+        <div class="section-head" data-reveal>
+          <div class="section-label">Recorrido visual</div>
+          <h2>Así funciona ruma por dentro, pantalla por pantalla.</h2>
+          <p>Toca cada paso para ver el pantallazo real de la aplicación y descubrir cómo se conecta cada espacio de tu grupo.</p>
         </div>
 
-        <div class="features-grid">
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="5" width="18" height="14" rx="2.5" /><circle cx="8.5" cy="10" r="1.5" /><path d="m21 16-5-5-6 6-2-2-5 5" />
-              </svg>
+        <div class="tour-layout">
+          <div class="tour-steps" role="list">
+            <button type="button" class="tour-step active" data-tour-step data-tour-screen="home" aria-expanded="true">
+              <div class="tour-step-head">
+                <span class="tour-step-num">01 · TU REFUGIO</span>
+                <span class="tour-step-tag">Inicio del grupo</span>
+              </div>
+              <h3>Un hogar privado con código de invitación</h3>
+              <p>Personaliza la portada y foto del grupo, invita solo a quienes quieres con un código de 6 caracteres y entra en un toque a cada módulo.</p>
+              <ul class="tour-step-bullets">
+                <li>Acceso directo a Recuerdos, Películas, Series, Música, Libros y Objetivos.</li>
+                <li>Feed de actividad reciente para saber qué agregó o completó cada integrante.</li>
+                <li>Roles claros (administrador y miembros) y salida con traspaso de liderazgo.</li>
+              </ul>
+            </button>
+
+            <button type="button" class="tour-step" data-tour-step data-tour-screen="activities" aria-expanded="false">
+              <div class="tour-step-head">
+                <span class="tour-step-num">02 · PLANES REALES</span>
+                <span class="tour-step-tag">Objetivos y Actividades</span>
+              </div>
+              <h3>Separa metas a largo plazo, actividades y notas</h3>
+              <p>Olvídate de listas eternas de trabajo. En ruma cada salida al cine, viaje o cumpleaños es una tarjeta compacta con su estado y avance.</p>
+              <ul class="tour-step-bullets">
+                <li>Tres pestañas limpias: Metas, Actividades y Notas compartidas.</li>
+                <li>Resumen compacto con actividades pendientes, próximas y tareas asignadas a ti.</li>
+                <li>Filtros rápidos por estado o por responsabilidades propias («Mis tareas»).</li>
+              </ul>
+            </button>
+
+            <button type="button" class="tour-step" data-tour-step data-tour-screen="activity-detail" aria-expanded="false">
+              <div class="tour-step-head">
+                <span class="tour-step-num">03 · RESPONSABILIDADES</span>
+                <span class="tour-step-tag">Detalle de actividad</span>
+              </div>
+              <h3>Reparte qué hace cada persona para que el plan suceda</h3>
+              <p>Dentro de cada actividad asigna responsabilidades reales (boletas, carro, hora de salida) con fecha límite y mira el progreso calcularse solo.</p>
+              <ul class="tour-step-bullets">
+                <li>Estados de organización: Planeando, Confirmada, En curso y Completada.</li>
+                <li>Avatar y nombre de cada responsable para saber exactamente qué le toca a cada uno.</li>
+                <li>Barra de progreso automática según las tareas marcadas como listas.</li>
+              </ul>
+            </button>
+
+            <button type="button" class="tour-step" data-tour-step data-tour-screen="memories" aria-expanded="false">
+              <div class="tour-step-head">
+                <span class="tour-step-num">04 · RECUERDOS</span>
+                <span class="tour-step-tag">Calendario + Google Drive</span>
+              </div>
+              <h3>Tus álbumes guardados en tu propio Google Drive</h3>
+              <p>Revive cada momento en el calendario mensual o en la línea de tiempo. Las fotos, videos y notas de voz se respaldan en calidad original en tu carpeta de Drive.</p>
+              <ul class="tour-step-bullets">
+                <li>Subcarpetas creadas automáticamente con formato «Título - Fecha».</li>
+                <li>Asocia una canción, ubicación y comentarios del grupo a cada recuerdo.</li>
+                <li>Caché local en IndexedDB para cargar tus recuerdos al instante en el teléfono.</li>
+              </ul>
+            </button>
+
+            <div class="tour-step" data-tour-step data-tour-screen="movies" role="button" tabindex="0" aria-expanded="false">
+              <div class="tour-step-head">
+                <span class="tour-step-num">05 · CULTURA EN GRUPO</span>
+                <span class="tour-step-tag">Películas, Series, Libros y Música</span>
+              </div>
+              <h3>Un club privado para todo lo que ven, leen y escuchan</h3>
+              <p>Busca títulos al instante en TMDb, Google Books, Open Library e iTunes. Cada integrante marca su propio avance y comparte su puntuación.</p>
+              <div class="tour-subpills" aria-label="Ver módulos de entretenimiento">
+                <button type="button" class="tour-subpill active" data-sub-screen="movies">Películas</button>
+                <button type="button" class="tour-subpill" data-sub-screen="books">Libros</button>
+                <button type="button" class="tour-subpill" data-sub-screen="music">Música</button>
+              </div>
+              <ul class="tour-step-bullets">
+                <li>Películas y series con seguimiento episodio por episodio y promedio grupal.</li>
+                <li>Biblioteca de libros con barra de páginas leídas y reseñas por integrante.</li>
+                <li>Playlist colaborativa con avances de 30s, letras y enlaces a Spotify, YouTube y Apple Music.</li>
+              </ul>
             </div>
-            <h3>Recuerdos en Google Drive</h3>
-            <p>Crea álbumes con fecha, lugar, música y notas de voz. Los archivos en alta calidad se guardan ordenados en la carpeta de Google Drive de tu propio grupo.</p>
+
+            <button type="button" class="tour-step" data-tour-step data-tour-screen="chat" aria-expanded="false">
+              <div class="tour-step-head">
+                <span class="tour-step-num">06 · CHAT CONTEXTUAL</span>
+                <span class="tour-step-tag">Conversación con contexto</span>
+              </div>
+              <h3>Conversa citando recuerdos, planes o películas</h3>
+              <p>Enlaza cualquier contenido del grupo directamente en un mensaje para comentar sin perder el hilo, reaccionar con emojis y compartir fotos o notas de voz.</p>
+              <ul class="tour-step-bullets">
+                <li>Selector organizado para citar recuerdos, películas, series, canciones, libros o actividades.</li>
+                <li>Buscador interno de mensajes, respuestas estilo hilo y reacciones rápidas.</li>
+                <li>Adjuntos de foto, video y audio optimizados para móvil sin llenar el almacenamiento local.</li>
+              </ul>
+            </button>
+          </div>
+
+          <!-- Teléfono sticky que cambia al seleccionar cada paso -->
+          <div class="tour-sticky" data-reveal>
+            <div class="device-bezel device-bezel-lg">
+              <div class="device-viewport" id="tour-phone-viewport">
+                <img id="tour-phone-img" src="assets/screens/screen-home.webp" alt="Vista real de ruma" width="390" height="844" />
+                <button type="button" class="device-zoom-btn" id="tour-zoom-btn" data-open-lightbox="home" aria-label="Ver en pantalla completa">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg>
+                  Ver grande
+                </button>
+              </div>
+            </div>
+
+            <div class="tour-caption-card">
+              <div class="tour-caption-top">
+                <span class="tour-caption-title" id="tour-cap-title">Tu espacio privado en un toque</span>
+                <div class="tour-nav-controls">
+                  <button type="button" class="tour-nav-btn" id="tour-prev-btn" aria-label="Paso anterior">←</button>
+                  <button type="button" class="tour-nav-btn" id="tour-next-btn" aria-label="Paso siguiente">→</button>
+                </div>
+              </div>
+              <p class="tour-caption-text" id="tour-cap-text">
+                Portada personalizada, código de invitación de 6 caracteres (RUMA26), miembros activos y accesos directos a Recuerdos, Películas, Series, Música, Libros y Objetivos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería completa de pantallazos reales -->
+    <section class="section section-alt" id="pantallazos">
+      <div class="container">
+        <div class="gallery-head-row" data-reveal>
+          <div class="section-head">
+            <div class="section-label">Capturas reales de la app</div>
+            <h2>Explora todas las pantallas de ruma.</h2>
+            <p>Haz clic en cualquier captura para verla en grande con su explicación detallada.</p>
+          </div>
+
+          <div class="filter-bar" role="group" aria-label="Filtrar capturas por categoría">
+            <button type="button" class="filter-pill active" data-gallery-filter="all" aria-pressed="true">Todas (8)</button>
+            <button type="button" class="filter-pill" data-gallery-filter="org" aria-pressed="false">Organización</button>
+            <button type="button" class="filter-pill" data-gallery-filter="media" aria-pressed="false">Entretenimiento</button>
+            <button type="button" class="filter-pill" data-gallery-filter="social" aria-pressed="false">Recuerdos y Chat</button>
+          </div>
+        </div>
+
+        <div class="screens-grid" data-reveal>
+          <article class="screen-card" data-screen-cat="org">
+            <button type="button" class="screen-thumb-btn" data-open-lightbox="home" aria-label="Ampliar Inicio del grupo">
+              <img src="assets/screens/screen-home.webp" alt="Pantalla Inicio del grupo en ruma" loading="lazy" width="390" height="844" />
+              <span class="screen-zoom-hint">Ampliar</span>
+            </button>
+            <div class="screen-card-info">
+              <div class="screen-card-kicker">Inicio</div>
+              <h3>Hub del grupo</h3>
+              <p>Código privado, integrantes y acceso directo a los 6 módulos.</p>
+            </div>
           </article>
 
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="4" width="18" height="17" rx="2.5" /><path d="M8 2v4M16 2v4M3 10h18M9 15l2 2 4-4" />
-              </svg>
+          <article class="screen-card" data-screen-cat="org">
+            <button type="button" class="screen-thumb-btn" data-open-lightbox="activities" aria-label="Ampliar Actividades grupales">
+              <img src="assets/screens/screen-activities.webp" alt="Pantalla Actividades en ruma" loading="lazy" width="390" height="844" />
+              <span class="screen-zoom-hint">Ampliar</span>
+            </button>
+            <div class="screen-card-info">
+              <div class="screen-card-kicker">Organización</div>
+              <h3>Actividades y planes</h3>
+              <p>Resumen de pendientes, pestañas Metas/Actividades/Notas y avance.</p>
             </div>
-            <h3>Actividades, metas y notas</h3>
-            <p>Organiza planes concretos (salidas al cine, viajes, cumpleaños), reparte responsabilidades por persona con cálculo automático de progreso y mantén metas y notas aparte.</p>
           </article>
 
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2.5" y="6" width="19" height="13" rx="2.2" /><path d="m2.5 10 19 0M7 6l2 4M14 6l2 4" />
-              </svg>
+          <article class="screen-card" data-screen-cat="org">
+            <button type="button" class="screen-thumb-btn" data-open-lightbox="activity-detail" aria-label="Ampliar Detalle de actividad">
+              <img src="assets/screens/screen-activity-detail.webp" alt="Pantalla Detalle de actividad en ruma" loading="lazy" width="390" height="844" />
+              <span class="screen-zoom-hint">Ampliar</span>
+            </button>
+            <div class="screen-card-info">
+              <div class="screen-card-kicker">Organización</div>
+              <h3>Responsabilidades</h3>
+              <p>Tareas por persona, fechas límite, estado del plan y progreso automático.</p>
             </div>
-            <h3>Club de cine, series y libros</h3>
-            <p>Busca títulos en TMDb, Google Books y Open Library. Cada integrante lleva su propio avance por episodio o página, deja reseñas y ve el promedio del grupo.</p>
           </article>
 
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 18V5l12-2v13" /><circle cx="6" cy="18" r="3" /><circle cx="18" cy="16" r="3" />
-              </svg>
+          <article class="screen-card" data-screen-cat="social">
+            <button type="button" class="screen-thumb-btn" data-open-lightbox="memories" aria-label="Ampliar Recuerdos en Google Drive">
+              <img src="assets/screens/screen-memories.webp" alt="Pantalla Recuerdos en ruma" loading="lazy" width="390" height="844" />
+              <span class="screen-zoom-hint">Ampliar</span>
+            </button>
+            <div class="screen-card-info">
+              <div class="screen-card-kicker">Google Drive</div>
+              <h3>Recuerdos y calendario</h3>
+              <p>Calendario visual, línea de tiempo y respaldo en carpeta Drive.</p>
             </div>
-            <h3>Música compartida</h3>
-            <p>Arma la banda sonora del grupo con búsqueda instantánea, avances de 30 segundos, letras sincronizadas y accesos directos a Spotify, YouTube y Apple Music.</p>
           </article>
 
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 11.5a8.4 8.4 0 0 1-12 7.5L3 21l1.6-5.2A8.4 8.4 0 1 1 21 11.5Z" />
-              </svg>
+          <article class="screen-card" data-screen-cat="media">
+            <button type="button" class="screen-thumb-btn" data-open-lightbox="movies" aria-label="Ampliar Club de Películas">
+              <img src="assets/screens/screen-movies.webp" alt="Pantalla Películas en ruma" loading="lazy" width="390" height="844" />
+              <span class="screen-zoom-hint">Ampliar</span>
+            </button>
+            <div class="screen-card-info">
+              <div class="screen-card-kicker">Entretenimiento</div>
+              <h3>Club de Películas</h3>
+              <p>Búsqueda TMDb, estado individual por persona y promedio grupal.</p>
             </div>
-            <h3>Chat contextual</h3>
-            <p>Habla sobre lo que importa citando directamente una película, canción, libro, recuerdo o actividad del grupo, junto con fotos, audios y reacciones.</p>
           </article>
 
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="4" y="11" width="16" height="10" rx="2.5" /><path d="M8 11V7a4 4 0 0 1 8 0v4" />
-              </svg>
+          <article class="screen-card" data-screen-cat="media">
+            <button type="button" class="screen-thumb-btn" data-open-lightbox="books" aria-label="Ampliar Club de Libros">
+              <img src="assets/screens/screen-books.webp" alt="Pantalla Libros en ruma" loading="lazy" width="390" height="844" />
+              <span class="screen-zoom-hint">Ampliar</span>
+            </button>
+            <div class="screen-card-info">
+              <div class="screen-card-kicker">Entretenimiento</div>
+              <h3>Biblioteca de Libros</h3>
+              <p>Avance por página, calificaciones y lecturas recomendadas en grupo.</p>
             </div>
-            <h3>Privado por diseño</h3>
-            <p>Sin perfiles públicos ni recomendaciones invasivas. Contraseñas protegidas con PBKDF2-SHA256, código personal de recuperación y acceso a grupos únicamente por invitación.</p>
+          </article>
+
+          <article class="screen-card" data-screen-cat="media">
+            <button type="button" class="screen-thumb-btn" data-open-lightbox="music" aria-label="Ampliar Música compartida">
+              <img src="assets/screens/screen-music.webp" alt="Pantalla Música en ruma" loading="lazy" width="390" height="844" />
+              <span class="screen-zoom-hint">Ampliar</span>
+            </button>
+            <div class="screen-card-info">
+              <div class="screen-card-kicker">Entretenimiento</div>
+              <h3>Playlist colaborativa</h3>
+              <p>Dedicatorias, avances de 30s, letras y enlaces a Spotify/YouTube/Apple.</p>
+            </div>
+          </article>
+
+          <article class="screen-card" data-screen-cat="social">
+            <button type="button" class="screen-thumb-btn" data-open-lightbox="chat" aria-label="Ampliar Chat contextual">
+              <img src="assets/screens/screen-chat.webp" alt="Pantalla Chat contextual en ruma" loading="lazy" width="390" height="844" />
+              <span class="screen-zoom-hint">Ampliar</span>
+            </button>
+            <div class="screen-card-info">
+              <div class="screen-card-kicker">Comunicación</div>
+              <h3>Chat contextual</h3>
+              <p>Citas de recuerdos y actividades, reacciones, fotos y notas de voz.</p>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Cómo funciona -->
-    <section class="section section-alt" id="como-funciona">
+    <!-- Casos de uso reales -->
+    <section class="section" id="casos-de-uso">
       <div class="container">
-        <div class="section-head">
-          <div class="section-label">En menos de dos minutos</div>
-          <h2>Cómo empezar con tu grupo.</h2>
-          <p>Pensado primero para el teléfono, sin configuraciones largas ni cuentas complicadas.</p>
+        <div class="section-head" data-reveal>
+          <div class="section-label">Pensado para la vida real</div>
+          <h2>Un refugio que se adapta a tu tipo de grupo.</h2>
+          <p>No es un gestor corporativo ni una red social masiva: está hecho para grupos cercanos que comparten planes y recuerdos de verdad.</p>
         </div>
 
-        <div class="steps-grid">
-          <div class="step-card">
-            <span class="step-num">01 · CUENTA</span>
-            <h3>Crea tu cuenta y guarda tu código</h3>
-            <p>Regístrate con tu correo, teléfono o @usuario. Recibirás un código personal de recuperación para proteger tu acceso en cualquier dispositivo.</p>
+        <div class="usecases-grid" data-reveal>
+          <article class="usecase-card">
+            <span class="usecase-tag">Amigos de siempre</span>
+            <h3>Que el plan no se quede en el chat</h3>
+            <p>Creen una actividad para la próxima salida, repartan boletas, transporte y comida, y voten qué película ver el viernes.</p>
+            <div class="usecase-example">Actividades + Películas + Chat con citas</div>
+          </article>
+
+          <article class="usecase-card">
+            <span class="usecase-tag">Parejas</span>
+            <h3>Su diario privado y listas compartidas</h3>
+            <p>Guarden cada salida especial con fotos en Google Drive, sigan juntos sus series episodio a episodio y armen metas del año.</p>
+            <div class="usecase-example">Recuerdos + Series + Metas + Música</div>
+          </article>
+
+          <article class="usecase-card">
+            <span class="usecase-tag">Viajes en grupo</span>
+            <h3>Todo el viaje ordenado en un lugar</h3>
+            <p>Coticen cabaña, dividan compras con responsables claros, armen la playlist de carretera y junten todas las fotos en una carpeta.</p>
+            <div class="usecase-example">Responsabilidades + Notas + Google Drive</div>
+          </article>
+
+          <article class="usecase-card">
+            <span class="usecase-tag">Familia</span>
+            <h3>Recuerdos seguros sin redes públicas</h3>
+            <p>Compartan fotos de cumpleaños y celebraciones en calidad original dentro de un círculo cerrado al que solo entra la familia.</p>
+            <div class="usecase-example">Código privado + Calendario de Recuerdos</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo instalar en iPhone y Android -->
+    <section class="section section-alt" id="instalar">
+      <div class="container">
+        <div class="install-card" data-reveal>
+          <div class="install-head">
+            <div>
+              <div class="section-label">Funciona como app en tu teléfono</div>
+              <h2>Instala ruma Beta en tu pantalla de inicio.</h2>
+              <p>Mientras publicamos la app nativa en Google Play, puedes usar ruma a pantalla completa en iPhone y Android en 15 segundos.</p>
+            </div>
+            <div class="filter-bar" role="tablist" aria-label="Elegir sistema operativo">
+              <button type="button" class="filter-pill active" data-install-tab="iphone" role="tab" aria-selected="true">iPhone (Safari)</button>
+              <button type="button" class="filter-pill" data-install-tab="android" role="tab" aria-selected="false">Android (Chrome)</button>
+            </div>
           </div>
-          <div class="step-card">
-            <span class="step-num">02 · GRUPO</span>
-            <h3>Crea tu espacio o únete con código</h3>
-            <p>Cada grupo tiene un código privado de 6 caracteres. Compártelo solo con tus personas cercanas para entrar al instante.</p>
+
+          <div class="install-panel active" data-install-panel="iphone">
+            <div class="install-step">
+              <span class="install-step-n">1</span>
+              <h3>Abre ruma Beta en Safari</h3>
+              <p>Entra a <a href="https://kevingomez-04.github.io/ruma-app/" target="_blank" rel="noopener" style="color:var(--primary);font-weight:700;">ruma Beta</a> desde Safari en tu iPhone.</p>
+            </div>
+            <div class="install-step">
+              <span class="install-step-n">2</span>
+              <h3>Pulsa el botón Compartir</h3>
+              <p>Toca el ícono de compartir en la barra inferior y elige <strong>«Añadir a pantalla de inicio»</strong>.</p>
+            </div>
+            <div class="install-step">
+              <span class="install-step-n">3</span>
+              <h3>Listo a pantalla completa</h3>
+              <p>ruma aparecerá con su ícono oficial y se abrirá a pantalla completa adaptada al Notch y Dynamic Island.</p>
+            </div>
           </div>
-          <div class="step-card">
-            <span class="step-num">03 · REFUGIO</span>
-            <h3>Organiza planes y guarda recuerdos</h3>
-            <p>Distribuyan responsabilidades de su próxima salida, comenten lo que ven o leen y respalden sus álbumes en Google Drive.</p>
+
+          <div class="install-panel" data-install-panel="android">
+            <div class="install-step">
+              <span class="install-step-n">1</span>
+              <h3>Abre ruma Beta en Chrome</h3>
+              <p>Entra a <a href="https://kevingomez-04.github.io/ruma-app/" target="_blank" rel="noopener" style="color:var(--primary);font-weight:700;">ruma Beta</a> desde Google Chrome en tu celular Android.</p>
+            </div>
+            <div class="install-step">
+              <span class="install-step-n">2</span>
+              <h3>Toca el menú ⋮</h3>
+              <p>Pulsa los tres puntos arriba a la derecha y selecciona <strong>«Instalar aplicación»</strong> o <strong>«Añadir a pantalla principal»</strong>.</p>
+            </div>
+            <div class="install-step">
+              <span class="install-step-n">3</span>
+              <h3>Ábrela como app nativa</h3>
+              <p>Accede directo desde tu cajón de apps. Próximamente también estará disponible en formato APK / Google Play.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -351,13 +507,13 @@
     <!-- Planes -->
     <section class="section" id="planes">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head" data-reveal>
           <div class="section-label">Transparente y sin anuncios</div>
           <h2>Planes pensados para crecer con tu grupo.</h2>
           <p>Empieza gratis durante la Beta con todas las funciones esenciales. ruma Plus ampliará límites muy pronto.</p>
         </div>
 
-        <div class="plans-grid">
+        <div class="plans-grid" data-reveal>
           <article class="plan-card">
             <div class="plan-top">
               <h3 class="plan-name">Plan Free</h3>
@@ -420,12 +576,12 @@
     <!-- Preguntas frecuentes -->
     <section class="section section-alt" id="faq">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head" data-reveal>
           <div class="section-label">Preguntas frecuentes</div>
           <h2>Respuestas claras sobre ruma y tu privacidad.</h2>
         </div>
 
-        <div class="faq-list">
+        <div class="faq-list" data-reveal>
           <details class="faq-item" open>
             <summary>
               ¿Dónde se guardan nuestras fotos y videos de Recuerdos?
@@ -448,21 +604,11 @@
 
           <details class="faq-item">
             <summary>
-              ¿Funciona en iPhone, Android y computador?
-              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9" /></svg>
-            </summary>
-            <div class="faq-body">
-              Sí. Actualmente puedes abrir ruma Beta directamente desde Safari en iPhone, Chrome en Android o cualquier navegador de escritorio, e instalarla en tu pantalla de inicio como app web. Próximamente publicaremos también la aplicación nativa para Android.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>
               ¿Qué pasa si olvido mi contraseña?
               <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9" /></svg>
             </summary>
             <div class="faq-body">
-              Al crear tu cuenta, ruma genera un código personal de recuperación (<code>RUMA-XXXX-XXXX</code>) que se almacena cifrado con hash. Si olvidas tu contraseña, podrás restablecerla ingresando ese código, y el sistema generará automáticamente uno nuevo de un solo uso. También puedes renovarlo cuando quieras en Ajustes → Mi Cuenta.
+              Al crear tu cuenta, ruma genera un código personal de recuperación (<code>RUMA-XXXX-XXXX</code>) que se almacena cifrado con hash PBKDF2-SHA256. Si olvidas tu contraseña, podrás restablecerla ingresando ese código, y el sistema generará automáticamente uno nuevo de un solo uso. También puedes renovarlo cuando quieras en Ajustes → Mi Cuenta.
             </div>
           </details>
 
@@ -482,19 +628,39 @@
     <!-- CTA final -->
     <section class="section">
       <div class="container">
-        <div class="cta-band">
+        <div class="cta-band" data-reveal>
           <div>
             <h2>Prueba la Beta y ayúdanos a pulir ruma.</h2>
             <p>Estamos abriendo el acceso para que grupos reales prueben la experiencia y nos compartan ideas o errores encontrados.</p>
           </div>
           <div class="cta-band-actions">
             <a href="https://kevingomez-04.github.io/ruma-app/" target="_blank" rel="noopener" class="btn btn-primary">Abrir ruma Beta</a>
-            <a href="mailto:kelvix110@gmail.com?subject=Feedback%20ruma%20Beta" class="btn btn-secondary">Enviar comentarios</a>
+            <a href="mailto:kelvix110@gmail.com?subject=Feedback%20ruma%20Beta" class="btn btn-secondary">Reportar error o idea</a>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- Lightbox de pantallas reales -->
+  <div class="lightbox" id="screen-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lb-title">
+    <div class="lightbox-dialog">
+      <button type="button" class="lightbox-close" id="lb-close" aria-label="Cerrar vista ampliada">✕</button>
+      <div class="lightbox-phone">
+        <img id="lb-img" src="assets/screens/screen-home.webp" alt="Pantalla ampliada de ruma" />
+      </div>
+      <div class="lightbox-meta">
+        <span class="lightbox-kicker" id="lb-kicker">Inicio del grupo</span>
+        <h3 id="lb-title">Tu espacio privado en un toque</h3>
+        <p id="lb-desc"></p>
+        <div class="lightbox-controls">
+          <button type="button" class="btn btn-ghost btn-sm" id="lb-prev">← Anterior</button>
+          <button type="button" class="btn btn-ghost btn-sm" id="lb-next">Siguiente →</button>
+          <span id="lb-counter" style="font-family:var(--font-mono);font-size:0.8rem;color:#B8A9CC;margin-left:0.35rem;">1 / 8</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Pie de página -->
   <footer class="site-footer">
@@ -513,8 +679,9 @@
         <div class="footer-col">
           <h4>Producto</h4>
           <ul>
-            <li><a href="#funciones">Funciones</a></li>
-            <li><a href="#como-funciona">Cómo funciona</a></li>
+            <li><a href="#recorrido">Cómo funciona</a></li>
+            <li><a href="#pantallazos">Pantallas reales</a></li>
+            <li><a href="#instalar">Instalar en móvil</a></li>
             <li><a href="#planes">Planes</a></li>
             <li><a href="https://kevingomez-04.github.io/ruma-app/" target="_blank" rel="noopener">Abrir ruma Beta</a></li>
           </ul>
