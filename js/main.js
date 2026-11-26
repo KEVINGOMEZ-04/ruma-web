@@ -47,6 +47,13 @@
       desc: 'Lleva el estado individual de cada integrante (Por ver, Vista, Favorita), califica películas y series, comparte reseñas y controla el avance capítulo por capítulo.'
     },
     {
+      id: 'series',
+      src: 'assets/screens/screen-series.webp',
+      kicker: 'Centro de Series',
+      title: 'Maratones con avance por capítulo',
+      desc: 'Añade series desde TMDb, marca cada capítulo visto por temporada, sigue tu progreso y el de tu grupo, y califica o comenta sin spoilers.'
+    },
+    {
       id: 'books',
       src: 'assets/screens/screen-books.webp',
       kicker: 'Club de Libros',
