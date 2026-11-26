@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FCFAFF" />
+  <title>Eliminación de Cuenta y Datos — ruma</title>
+  <meta name="description" content="Cómo solicitar la eliminación definitiva de tu cuenta y datos personales en ruma, qué datos se borran y en cuánto tiempo se procesa tu solicitud." />
+  <link rel="icon" type="image/png" href="assets/ruma_icon_192.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="./" class="brand" aria-label="ruma — Inicio">
+        <img src="assets/ruma_home_axolotl.png" alt="Logo de ruma" class="brand-mark" width="34" height="34" />
+        <span>ruma</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Secciones principales">
+        <a href="./">Inicio</a>
+        <a href="./#funciones">Funciones</a>
+        <a href="./#planes">Planes</a>
+        <a href="privacidad.html">Privacidad</a>
+        <a href="terminos.html">Términos</a>
+        <a href="eliminar-cuenta.html" aria-current="page">Eliminar cuenta</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="icon-btn" id="theme-toggle" aria-label="Cambiar tema"></button>
+        <a href="https://kevingomez-04.github.io/ruma-app/" target="_blank" rel="noopener" class="btn btn-primary btn-sm nav-cta-desktop">Probar Beta</a>
+        <button type="button" class="icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-drawer" id="mobile-drawer">
+      <nav class="mobile-drawer-links" aria-label="Menú móvil">
+        <a href="./">Inicio</a>
+        <a href="./#funciones">Funciones</a>
+        <a href="./#planes">Planes</a>
+        <a href="privacidad.html">Política de privacidad</a>
+        <a href="terminos.html">Términos y condiciones</a>
+        <a href="eliminar-cuenta.html" aria-current="page">Eliminación de cuenta</a>
+      </nav>
+      <a href="https://kevingomez-04.github.io/ruma-app/" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;">Abrir ruma Beta</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="legal-hero">
+      <div class="container">
+        <a href="./" class="legal-breadcrumb">← Volver al inicio</a>
+        <h1>Eliminación de Cuenta y Datos</h1>
+        <p>En <strong>ruma</strong> tienes el control total sobre tu cuenta. Desde aquí puedes solicitar la eliminación permanente de tu cuenta o de datos específicos asociados.</p>
+        <div class="legal-meta">
+          <span><strong>Plazo de atención:</strong> Máximo 7 días hábiles</span>
+          <span><strong>Canal directo:</strong> kelvix110@gmail.com</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container legal-layout">
+      <aside class="legal-toc" aria-label="Índice de eliminación">
+        <div class="legal-toc-title">Contenido</div>
+        <ol>
+          <li><a href="#que-se-elimina">1. Qué datos se eliminan</a></li>
+          <li><a href="#google-drive">2. Archivos en Google Drive</a></li>
+          <li><a href="#desde-app">3. Borrado desde la app</a></li>
+          <li><a href="#solicitud">4. Solicitar eliminación</a></li>
+        </ol>
+      </aside>
+
+      <article class="legal-content">
+        <section id="que-se-elimina">
+          <h2>1. Qué datos se eliminan y plazos</h2>
+          <p>Al solicitar la eliminación definitiva de tu cuenta en <strong>ruma</strong>, borramos permanentemente de nuestra base de datos sincronizada (Firebase Realtime Database) los siguientes registros:</p>
+          <ul>
+            <li>Tu cuenta personal: nombre visible, <code>@usuario</code>, correo electrónico, número de teléfono, foto de perfil, biografía y preferencias.</li>
+            <li>Tus credenciales hasheadas (<code>passwordHash</code> y <code>recoveryCodeHash</code>).</li>
+            <li>Tu membresía en todos los grupos en los que participes (si eras creador de un grupo con otros miembros, el liderazgo se transfiere al siguiente administrador o integrante; si eras el único integrante, el grupo también se elimina).</li>
+            <li>Tus adjuntos multimedia propios enviados en el chat y registros asociados que solicites retirar.</li>
+          </ul>
+          <div class="callout danger">
+            <strong>Acción irreversible</strong>
+            Una vez completada la eliminación (en un plazo máximo de <strong>7 días hábiles</strong> tras verificar la titularidad de la cuenta), no es posible recuperar tu cuenta ni el historial borrado. No conservamos copias comerciales ni perfiles residuales.
+          </div>
+        </section>
+
+        <section id="google-drive">
+          <h2>2. Qué ocurre con tus archivos en Google Drive</h2>
+          <p>Las fotos, videos y notas de voz de Recuerdos que sincronizaste en Google Drive residen directamente en tu propia cuenta de Google Drive (o en la carpeta compartida del grupo), no en servidores de ruma.</p>
+          <ul>
+            <li>Eliminar tu cuenta de ruma <strong>no borra</strong> los archivos que ya estén guardados en tu Google Drive personal para evitar pérdida accidental de tus recuerdos.</li>
+            <li>Si deseas eliminar esos archivos o revocar el acceso de ruma, puedes hacerlo directamente desde tu cuenta de Google Drive y desde <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Permisos de cuenta de Google</a>.</li>
+          </ul>
+        </section>
+
+        <section id="desde-app">
+          <h2>3. Qué puedes borrar tú mismo desde la app</h2>
+          <p>Sin necesidad de esperar una solicitud, dentro de ruma puedes borrar al instante:</p>
+          <ul>
+            <li>Tus mensajes del chat (y sus adjuntos de foto, audio o video).</li>
+            <li>Tus recuerdos, actividades, responsabilidades, metas, notas, películas, series, libros y canciones.</li>
+            <li>Cualquier grupo que hayas creado (desde el menú de opciones del grupo → <em>Eliminar grupo</em>) o salir de grupos a los que te uniste.</li>
+            <li>Los datos locales cacheados en tu dispositivo cerrando sesión y borrando datos del sitio en tu navegador.</li>
+          </ul>
+        </section>
+
+        <section id="solicitud">
+          <h2>4. Solicitar eliminación de cuenta o datos</h2>
+          <p>Completa los siguientes datos para generar tu solicitud verificada hacia <a href="mailto:kelvix110@gmail.com">kelvix110@gmail.com</a>. Recibirás confirmación por correo una vez completado el borrado.</p>
+
+          <form class="form-card" id="delete-account-form">
+            <div class="field">
+              <label for="del-identifier">Tu @usuario, correo electrónico o teléfono registrado</label>
+              <input type="text" id="del-identifier" placeholder="ej: @tuusuario o tu@correo.com" required />
+            </div>
+
+            <div class="field">
+              <label for="del-scope">¿Qué deseas eliminar?</label>
+              <select id="del-scope">
+                <option value="cuenta-completa">Eliminar mi cuenta completa y todos mis datos asociados</option>
+                <option value="solo-datos">Eliminar solo datos específicos (mantener mi cuenta activa)</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="del-notes">Detalles adicionales (opcional)</label>
+              <textarea id="del-notes" rows="3" placeholder="Por ejemplo: nombre del grupo o datos concretos que deseas retirar."></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Enviar solicitud por correo</button>
+              <button type="button" class="btn btn-secondary" id="btn-copy-delete-request">Copiar texto de solicitud</button>
+            </div>
+            <div class="inline-feedback" id="delete-form-feedback" aria-live="polite"></div>
+          </form>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;padding-top:0;">
+        <span>© 2026 ruma. Todos los derechos reservados.</span>
+        <div style="display:flex;gap:1.25rem;flex-wrap:wrap;">
+          <a href="./">Inicio</a>
+          <a href="terminos.html">Términos y Condiciones</a>
+          <a href="privacidad.html">Política de Privacidad</a>
+          <a href="mailto:kelvix110@gmail.com">Soporte</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
