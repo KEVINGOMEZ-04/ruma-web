@@ -166,6 +166,16 @@
       if (e.target === lb) close();
     });
 
+    // Gesto táctil: deslizar izquierda/derecha para navegar entre pantallazos
+    let touchX = null;
+    lb.addEventListener('touchstart', (e) => { touchX = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', (e) => {
+      if (touchX === null) return;
+      const dx = e.changedTouches[0].clientX - touchX;
+      touchX = null;
+      if (Math.abs(dx) > 50) renderIdx(currentIdx + (dx < 0 ? 1 : -1));
+    }, { passive: true });
+
     document.addEventListener('keydown', (e) => {
       if (!lb.classList.contains('open')) return;
       if (e.key === 'Escape') close();
