@@ -140,15 +140,15 @@
 
         <section id="google-apis">
           <h2>4. Datos de Google y Política de Uso Limitado</h2>
-          <p>Cuando decides conectar tu cuenta de Google para utilizar las funciones de respaldo en Google Drive, ruma solicita únicamente los permisos (<em>scopes</em>) necesarios:</p>
+          <p>Cuando decides conectar tu cuenta de Google para utilizar las funciones de respaldo en Google Drive, ruma solicita únicamente los permisos (<em>scopes</em>) mínimos necesarios:</p>
           <ul>
-            <li><code>userinfo.email</code> y <code>userinfo.profile</code>: para mostrar tu correo, nombre e imagen de la cuenta de Google vinculada dentro de la sección de conexión de Drive.</li>
-            <li><code>https://www.googleapis.com/auth/drive</code>: exclusivamente para verificar la carpeta compartida que indiques, crear subcarpetas organizadas por recuerdo (<code>[Título] - [Fecha]</code>) y subir las fotos, videos o notas de voz que tú selecciones manualmente.</li>
+            <li><code>openid</code>, <code>email</code> y <code>profile</code>: para autenticar tu identidad y mostrar tu correo, nombre e imagen de la cuenta de Google vinculada.</li>
+            <li><code>https://www.googleapis.com/auth/drive.file</code>: permiso de alcance mínimo para acceder únicamente a la carpeta <code>Ruma 🌷</code> y a los archivos/subcarpetas de recuerdos (<code>[Título] - [Fecha]</code>) creados o autorizados explícitamente por ti mediante ruma.</li>
           </ul>
 
           <div class="callout">
             <strong>Declaración de Cumplimiento de Uso Limitado (Google API Services User Data Policy)</strong>
-            El uso y la transferencia por parte de ruma de la información recibida de las APIs de Google a cualquier otra aplicación cumplirán estrictamente con la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Política de Datos de Usuario de los Servicios de API de Google</a>, incluidos los requisitos de <strong>Uso Limitado (Limited Use)</strong>. ruma no accede, lee, modifica ni elimina archivos de tu Google Drive ajenos a la carpeta de recuerdos que tú configures.
+            El uso y la transferencia por parte de ruma de la información recibida de las APIs de Google a cualquier otra aplicación cumplirán estrictamente con la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Política de Datos de Usuario de los Servicios de API de Google</a>, incluidos los requisitos de <strong>Uso Limitado (Limited Use)</strong>. Con el permiso <code>drive.file</code>, ruma no puede ver, leer, modificar ni eliminar archivos de tu Google Drive ajenos a los creados o seleccionados con ruma.
           </div>
 
           <p>Puedes desconectar tu cuenta de Google desde ruma o revocar el acceso en cualquier momento desde <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>.</p>
@@ -158,8 +158,9 @@
           <h2>5. Almacenamiento y medidas de seguridad</h2>
           <ul>
             <li><strong>Cifrado en tránsito:</strong> todas las comunicaciones con nuestros servidores y APIs externas se realizan exclusivamente mediante HTTPS/TLS.</li>
-            <li><strong>Protección de contraseñas:</strong> las contraseñas y códigos de recuperación se derivan en el cliente con <code>PBKDF2-SHA256</code> y salt aleatorio único de 16 bytes por credencial; nunca se almacenan contraseñas en texto plano en cuentas nuevas ni migradas.</li>
-            <li><strong>Sincronización particionada:</strong> los datos de grupos y cuentas se sincronizan en Firebase Realtime Database de forma separada por entidad, y los archivos multimedia pesados se almacenan en IndexedDB local y en tu carpeta de Google Drive o espacio separado de adjuntos de chat.</li>
+            <li><strong>Autenticación y credenciales:</strong> la autenticación de cuentas opera con <strong>Firebase Authentication</strong> y tokens JWT verificados en servidor; en Android los tokens de sesión y OAuth se almacenan cifrados mediante Android Keystore. Nunca almacenamos contraseñas en texto plano.</li>
+            <li><strong>Control de acceso y sincronización particionada:</strong> los datos de cada grupo en Firebase Realtime Database están restringidos por reglas de seguridad únicamente a los miembros autorizados del grupo, y los archivos multimedia pesados se respaldan en tu propia carpeta de Google Drive.</li>
+            <li><strong>Operación en segundo plano (Android):</strong> la app utiliza notificaciones push (Firebase Cloud Messaging), transferencias de archivos iniciadas por el usuario hacia Google Drive (WorkManager / servicio con notificación visible de progreso) y recordatorios locales programados para planes, actividades y metas.</li>
           </ul>
         </section>
 
@@ -167,16 +168,18 @@
           <h2>6. Servicios de terceros utilizados</h2>
           <p>Para ofrecer sus funciones, ruma se comunica con los siguientes servicios externos:</p>
           <ul>
-            <li><strong>Google Firebase Realtime Database:</strong> sincronización en tiempo real de cuentas, grupos y adjuntos de chat.</li>
-            <li><strong>Google Drive API (opcional):</strong> almacenamiento directo de álbumes de Recuerdos en tu propia cuenta de Drive.</li>
-            <li><strong>TMDb, Apple iTunes, LRCLIB, Google Books y Open Library:</strong> búsquedas públicas de fichas técnicas de películas, series, canciones, letras y libros. Solo se envían los términos de búsqueda ingresados por el usuario, sin adjuntar datos personales.</li>
+            <li><strong>Google Firebase (Authentication, Realtime Database y Cloud Messaging):</strong> gestión segura de cuentas, sincronización en tiempo real de tus grupos y envío de notificaciones push (almacenando el token técnico del dispositivo mientras mantengas sesión iniciada).</li>
+            <li><strong>Cloudflare Workers:</strong> capa intermediaria segura para búsqueda de catálogo multimedia, envío de notificaciones push, validación de códigos de invitación y eliminación definitiva de cuentas.</li>
+            <li><strong>Google Play Billing y RevenueCat (Android):</strong> procesamiento oficial de suscripciones de <strong>ruma Plus</strong> y verificación del estado de compra. ruma nunca accede ni almacena datos de tu tarjeta bancaria.</li>
+            <li><strong>Google Drive API (opcional, alcance <code>drive.file</code>):</strong> almacenamiento directo de álbumes de Recuerdos en tu propia cuenta de Drive.</li>
+            <li><strong>TMDb, Apple iTunes, LRCLIB, Google Books y Open Library:</strong> búsquedas públicas de fichas técnicas de películas, series, canciones, letras y libros sin enviar datos personales.</li>
           </ul>
         </section>
 
         <section id="conservacion">
           <h2>7. Conservación y eliminación de datos</h2>
-          <p>Conservamos los datos de tu cuenta y grupos mientras tu cuenta permanezca activa para prestar el Servicio. Puedes eliminar mensajes individuales, recuerdos, actividades o grupos creados por ti directamente desde la aplicación.</p>
-          <p>Si deseas eliminar tu cuenta completa y todos los datos personales asociados, consulta nuestra página dedicada de <a href="eliminar-cuenta.html">Eliminación de Cuenta y Datos</a>. Procesamos las solicitudes verificadas en un plazo máximo de <strong>7 días hábiles</strong>.</p>
+          <p>Conservamos los datos de tu cuenta y grupos mientras tu cuenta permanezca activa para prestar el Servicio. Puedes eliminar mensajes individuales, recuerdos, actividades o grupos creados por ti, así como <strong>reportar contenido o bloquear usuarios</strong> directamente desde la aplicación.</p>
+          <p>Puedes eliminar tu cuenta completa y todos tus datos personales <strong>al instante desde dentro de la app</strong> (<em>Ajustes → Privacidad y Términos → Eliminar mi cuenta ahora</em>) o a través de nuestra página web pública de <a href="eliminar-cuenta.html">Eliminación de Cuenta y Datos</a>.</p>
           <p>Ten en cuenta que los archivos respaldados en tu propio Google Drive permanecen bajo tu control directo dentro de tu cuenta de Google, donde puedes borrarlos cuando desees.</p>
         </section>
 
